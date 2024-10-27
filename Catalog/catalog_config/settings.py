@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',  # If you are using DRF
+    'catalog',  # Add this line to include your catalog app
 ]
 
 MIDDLEWARE = [
