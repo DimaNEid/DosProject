@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from order.controllers.PurchaseController import PurchaseController
 
+purchase_detail = PurchaseController.as_view({'post': 'create'})
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('order/', include('order.routes.urls')),
+    # path('order/purchase/<int:pk>/', purchase_detail, name='purchase'),
 ]
