@@ -24,7 +24,7 @@ from catalog.controllers.searchController import searchController
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.routes.urls')),
-    path('catalog/search/', searchController.as_view({'get': 'list'}), name='search-list'),
+    #path('catalog/search/', searchController.as_view({'get': 'list'}), name='search-list'),
 
 
 ]
