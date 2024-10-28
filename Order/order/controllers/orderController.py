@@ -26,9 +26,9 @@ class orderController(viewsets.ViewSet):
         # Using .get to safely access 'count' from request data
         count = request.data.get('count', None)
 
-        if count is None:
+        if not count:
             return Response({"error": "Count parameter is required"}, status=400)
 
         # Call the purchase handling method
-        result, status_code = handle_purchase(pk, count)
+        result, status_code = handle_purchase(pk, int(count))
         return Response(result, status=status_code)
