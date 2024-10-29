@@ -10,13 +10,3 @@ def search_books(topic):
     return {"error": "Failed to fetch search results from Catalog service"}, response.status_code
 
 
-# import requests
-#
-# def search_books(topic):
-#     """Sends a GET request to the Catalog service to search for books."""
-#     catalog_url = f"http://127.0.0.1:8000/catalog/search/?topic={topic}"
-#     response = requests.get(catalog_url)
-#     if response.status_code == 200:
-#         return response.json()
-#     return {"error": "Failed to fetch search results from Catalog service"}, response.status_code
-
