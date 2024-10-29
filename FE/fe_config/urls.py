@@ -22,6 +22,6 @@ from fe.controllers.PurchaseController import PurchaseController
 purchase_detail = PurchaseController.as_view({'post': 'create'})
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('fe/', include('fe.routes.urls')),
-# path('fe/purchase/<int:pk>/', purchase_detail, name='purchase'),
+     path('FrontEnd_service/', include('fe.routes.urls')),
+
 ]
