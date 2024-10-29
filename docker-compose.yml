@@ -1,0 +1,29 @@
+version: "3"
+services:
+  catalog_service:
+    build: ./Catalog
+    container_name: catalog_service
+    ports:
+      - "8000:8000"
+    networks:
+      - my_network
+
+  order_service:
+    build: ./Order
+    container_name: order_service
+    ports:
+      - "8002:8002"
+    networks:
+      - my_network
+
+  fe_service:
+    build: ./FE
+    container_name: fe_service
+    ports:
+      - "8001:8001"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
