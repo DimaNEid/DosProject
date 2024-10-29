@@ -1,5 +1,4 @@
 
-
 from catalog.model.Book import Book
 from django.shortcuts import get_object_or_404
 from catalog.serializers.serializers import BookSerializer
