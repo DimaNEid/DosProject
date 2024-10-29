@@ -22,6 +22,6 @@ from order.controllers.PurchaseController import PurchaseController
 purchase_detail = PurchaseController.as_view({'post': 'create'})
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('order/', include('order.routes.urls')),
+    path('order_service/', include('order.routes.urls')),
     # path('order/purchase/<int:pk>/', purchase_detail, name='purchase'),
 ]
