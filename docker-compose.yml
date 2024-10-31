@@ -1,24 +1,24 @@
 version: "3"
 services:
-  catalog_service:
+  catalogservice:
     build: ./Catalog
-    container_name: catalog_service
+    container_name: catalogservice
     ports:
       - "8000:8000"
     networks:
       - my_network
 
-  order_service:
+  orderservice:
     build: ./Order
-    container_name: order_service
+    container_name: orderservice
     ports:
       - "8002:8002"
     networks:
       - my_network
 
-  fe_service:
+  feservice:
     build: ./FE
-    container_name: fe_service
+    container_name: feservice
     ports:
       - "8001:8001"
     networks:
