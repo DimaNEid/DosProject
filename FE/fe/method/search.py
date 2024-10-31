@@ -7,6 +7,6 @@ def search_books(topic):
     response = requests.get(search_url)
     if response.status_code == 200:
         return response.json(), response.status_code
-    return {"error": "Failed to fetch search results from Catalog service"}, response.status_code
+    return {"error": f"Failed to fetch search results from Catalog service, error code {response.status_code}"}, response.status_code
 
 
