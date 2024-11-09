@@ -6,3 +6,6 @@ router = routers.SimpleRouter(trailing_slash=False)
 router.register(r'purchase', PurchaseController, basename='purchase')
 
 urlpatterns = router.urls
+
+print(router.urls)
+

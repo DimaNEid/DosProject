@@ -19,7 +19,7 @@ from django.urls import path
 from django.urls import path, include
 from order.controllers.PurchaseController import PurchaseController
 
-purchase_detail = PurchaseController.as_view({'post': 'create'})
+purchase_detail = PurchaseController.as_view({'post': 'update'})
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('order_service/', include('order.routes.urls')),
