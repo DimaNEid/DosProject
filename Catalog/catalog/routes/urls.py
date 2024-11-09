@@ -1,3 +1,4 @@
+from django.core.serializers import serialize
 from rest_framework_nested import routers
 from sqlalchemy import false
 
@@ -12,4 +13,5 @@ router.register(r'info', infoController, basename='info')
 router.register(r'update', updateController, basename='update')
 
 urlpatterns = router.urls
+
 

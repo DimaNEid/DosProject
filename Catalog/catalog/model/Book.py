@@ -8,3 +8,5 @@ class Book(models.Model):
     topic = models.CharField(max_length=120, null=True, blank=True)
     count = models.IntegerField(max_length=120, null=True, blank=True)
     catalog_id = models.ForeignKey(Catalog, on_delete=models.CASCADE)
+
+
