@@ -19,7 +19,7 @@ from django.urls import path, include
 
 from fe.controllers.PurchaseController import PurchaseController
 
-purchase_detail = PurchaseController.as_view({'post': 'create'})
+purchase_detail = PurchaseController.as_view({'post': 'update'})
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('FrontEnd_service/', include('fe.routes.urls')),
